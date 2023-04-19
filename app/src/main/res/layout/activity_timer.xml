@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    tools:context=".TimerActivity">
+
+
+    <LinearLayout
+        android:id="@+id/totalTimeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/totalTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Time"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+        <EditText
+            android:id="@+id/totalTimeHr"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="00"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <EditText
+            android:id="@+id/totalTimeMin"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="00"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <EditText
+            android:id="@+id/totalTimeSec"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="00"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="64dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workOutTimeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalTimeLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/workOutTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Workout"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:id="@+id/workOutTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/workOutTimeStartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/workOutTimePauseBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/rounded_corner"-->
+        <!--            android:text="Stop"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="10sp" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restTimeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/workOutTimeLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/restTimeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Rest"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:id="@+id/restTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/restTimeStartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="10sp"
+            android:layout_height="0dp" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/restTimePauseBtn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/rounded_corner"-->
+        <!--            android:text="Stop"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="10sp" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/workOutTimeViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/restTimeLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/workOutTimeViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Workout"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/workOutTimeViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restTimeViewLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/workOutTimeViewLinearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/restTimeViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Rest"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="5sp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/restTimeViewValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner"
+        android:text="Exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restTimeViewLinearLayout" />
+
+    <EditText
+        android:id="@+id/resValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="126dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
