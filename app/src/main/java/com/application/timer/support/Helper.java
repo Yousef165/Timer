@@ -28,8 +28,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Helper {
 
+    
     private static final String TAG = "testLoad";
 
+    // Create a alert dialog
     public void alert(String title, String message, Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message);
@@ -42,6 +44,7 @@ public class Helper {
         alertDialog.show();
     }
 
+    // Create a notification channel
     public void createNotificationChannel(Context context) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -55,6 +58,7 @@ public class Helper {
         }
     }
 
+    // Send a notification
     public void sendNotification(String title, int notificationId, Context ctx) {
 
         Intent snoozeIntent = new Intent(ctx, MyBroadcastReceiver.class);
@@ -83,7 +87,7 @@ public class Helper {
         // notificationId is a unique int for each notification that you must define
         notificationManager.notify(notificationId, builder.build());
     }
-
+    // Ring the phone
     public void ring(Context context){
         try {
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

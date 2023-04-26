@@ -10,6 +10,7 @@ import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class MyBroadcastReceiver extends BroadcastReceiver {
 
+    //  receiver
     public static final String ACTION_SNOOZE = "OK";
     public static final String EXTRA_NOTIFICATION_ID = "notification-id";
 
